@@ -1,7 +1,6 @@
 from sklearn.datasets import load_breast_cancer
 from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
-import pandas as pd
+
 
 def get_data_frame():
     dataset= load_breast_cancer(as_frame=True)
