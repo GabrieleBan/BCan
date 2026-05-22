@@ -6,11 +6,12 @@ mostra l'accuratezza
 def show_accuracy_metric(model_name:str ='',train=None,test=None):
     train_acc, test_acc= None, None
     if train != None :
-        train_acc = accuracy_score(y_true=train[:][0],y_pred=train[:][0])
+        print(train[:][0])
+        train_acc = accuracy_score(y_true=train[:][0],y_pred=train[:][1])
         print(f" train --- {model_name} : accuracy {train_acc}")
         
     if test != None :
-        test_acc = accuracy_score(y_true=test[:][0],y_pred=test[:][0])
+        test_acc = accuracy_score(y_true=test[:][0],y_pred=test[:][1])
         print(f" test --- {model_name} : accuracy {test_acc}")
 
 

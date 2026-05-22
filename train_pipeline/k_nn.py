@@ -10,8 +10,9 @@ def train(X_scalar, y_scalar, count=None):
     else:
         vicini = count
 
-    for x in range(0,vicini):
-        knn = KNeighborsClassifier(n_neighbors = x)# definisco il modello
+    for x in range(1,vicini,2):
+        print(x)
+        knn = KNeighborsClassifier(n_neighbors = 4)# definisco il modello
         knn.fit(X_scalar, y_scalar) # faccio l'addestramento
         y_pred = knn.predict(X_scalar) # eseguo la predizione
         lista_y_pred.append(y_pred)
